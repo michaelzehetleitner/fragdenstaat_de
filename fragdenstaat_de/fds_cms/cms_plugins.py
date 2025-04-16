@@ -34,6 +34,7 @@ from .models import (
     FoiRequestListCMSPlugin,
     ModalCMSPlugin,
     OneClickFoiRequestCMSPlugin,
+    OpenSearchCMSPlugin,
     PageAnnotationCMSPlugin,
     PagePreviewCMSPlugin,
     PretixEmbedCMSPlugin,
@@ -789,3 +790,11 @@ class PagePreviewPlugin(CMSPluginBase):
         context["description"] = page.get_meta_description()
 
         return super().render(context, instance, placeholder)
+
+
+@plugin_pool.register_plugin
+class OpenSearchPlugin(CMSPluginBase):
+    model = OpenSearchCMSPlugin
+    module = _("Elements")
+    name = _("OpenSearch Searchbox")
+    render_template = "fds_cms/opensearch.html"
