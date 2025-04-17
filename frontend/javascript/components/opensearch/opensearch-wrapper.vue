@@ -29,13 +29,17 @@ const ITEMS_PER_PAGE = 10;
 export type Result = { title: string, url: string, id: string, text: string, site: string };
 type SearchParams = { query: string, currentPage: number, maxPage: number }
 
-const props = defineProps<{ endpoint: string }>()
+const props = defineProps<{ endpoint: string, urltemplate: string }>()
 
 const searchParams: Ref<SearchParams | null> = ref(null);
 const searchResults: Ref<Result[] | null> = ref(null);
 
 function handleSearch(search: string) {
   searchParams.value = { query: search, currentPage: 0, maxPage: 0 }
+}
+
+function getElementContent(item: Element | Document, tagName: string): string {
+  return item.getElementsByTagName(tagName)[0].textContent!
 }
 
 watch((): [string | undefined, number | undefined] => [searchParams.value?.query, searchParams.value?.currentPage], ([query, page] : [string | undefined, number | undefined]) => {
@@ -57,16 +61,19 @@ watch((): [string | undefined, number | undefined] => [searchParams.value?.query
         const parser = new DOMParser();
         const doc = parser.parseFromString(text, "text/xml");
         searchResults.value = Array.from(doc.getElementsByTagName("item")).map(item => {
+          const date = getElementContent(item, 'date')
+          const link = getElementContent(item, 'link')
+          const collection = getElementContent(item, 'collection')
           const result = {
-            title: item.getElementsByTagName('title')[0].textContent!,
-            url: item.getElementsByTagName('link')[0].textContent!,
-            id: item.getElementsByTagName('docId')[0].textContent!,
-            text: DOMPurify.sanitize(item.getElementsByTagName('description')[0].textContent!),
-            site: item.getElementsByTagName('site')[0].textContent!
+            title: getElementContent(item, 'title'),
+            url: props.urltemplate.replace('$collection', collection).replace('$link', link).replace('$date', date),
+            id: getElementContent(item, 'docId'),
+            text: DOMPurify.sanitize(getElementContent(item, 'description')),
+            site: getElementContent(item, 'site')
           };
           return result
         });
-        searchParams.value!.maxPage = parseInt(doc.getElementsByTagName('totalResults')[0].textContent!)/parseInt(doc.getElementsByTagName('itemsPerPage')[0].textContent!)
+        searchParams.value!.maxPage = parseInt(getElementContent(doc, 'totalResults'))/parseInt(getElementContent(doc, 'itemsPerPage'))
       });
 
     onWatcherCleanup(() => {
