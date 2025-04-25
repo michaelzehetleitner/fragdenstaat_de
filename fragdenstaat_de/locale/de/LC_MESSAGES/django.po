@@ -7707,7 +7707,6 @@ msgstr "Banner mit Slide-Animation ausblenden"
 #~ msgstr "Artikel bearbeiten"
 
 #, python-format
-#~| msgid "Sending to all newsletter subscribers"
 #~ msgid "Sending to newsletter subscribers of %(segment_count)s segments"
 #~ msgstr ""
 #~ "Sende an alle Newsletter-Abonnenties von %(segment_count)s Segmenten"
