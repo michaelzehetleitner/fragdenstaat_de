@@ -13,13 +13,13 @@ importers:
         version: 3.6.2
       '@okfde/filingcabinet':
         specifier: github:okfde/django-filingcabinet
-        version: https://codeload.github.com/okfde/django-filingcabinet/tar.gz/64b7b4ad804067e2f16e8a0f165c139e3ffe5fb5(typescript@5.8.3)
+        version: https://codeload.github.com/okfde/django-filingcabinet/tar.gz/d70b5d3ab00f2262d18bfb381fab95473b73ac1a(typescript@5.8.3)
       '@popperjs/core':
         specifier: ^2.11.8
         version: 2.11.8
       '@sentry/browser':
-        specifier: ^7.119.0
-        version: 7.119.0
+        specifier: ^9.14.0
+        version: 9.14.0
       '@sentry/integrations':
         specifier: ^7.114.0
         version: 7.114.0
@@ -37,19 +37,19 @@ importers:
         version: https://codeload.github.com/okfde/froide/tar.gz/0804cb08252ff7cde2624b74a1a6a2a2bc96e438(fuse.js@6.6.2)(typescript@5.8.3)
       froide_campaign:
         specifier: github:okfde/froide-campaign
-        version: https://codeload.github.com/okfde/froide-campaign/tar.gz/5d4914f7c2d8eabcc0d121bb46ec9d56595d9eae(froide@https://codeload.github.com/okfde/froide/tar.gz/0804cb08252ff7cde2624b74a1a6a2a2bc96e438(fuse.js@6.6.2)(typescript@5.8.3))(typescript@5.8.3)
+        version: https://codeload.github.com/okfde/froide-campaign/tar.gz/e2512752e75dabd27ca6301dfcee1cdf1de20420(froide@https://codeload.github.com/okfde/froide/tar.gz/0804cb08252ff7cde2624b74a1a6a2a2bc96e438(fuse.js@6.6.2)(typescript@5.8.3))(typescript@5.8.3)
       froide_exam:
         specifier: github:okfde/froide-exam
-        version: https://codeload.github.com/okfde/froide-exam/tar.gz/88a2cda9f71b9f8eef9d4bb07e200463e5554e62
+        version: https://codeload.github.com/okfde/froide-exam/tar.gz/779005ccfc21a3e75aeb57eb486c91b670739a3c
       froide_food:
         specifier: github:okfde/froide-food
-        version: https://codeload.github.com/okfde/froide-food/tar.gz/1c5b611ec6273e4e8dc5d27ef048231343f95dff(froide@https://codeload.github.com/okfde/froide/tar.gz/0804cb08252ff7cde2624b74a1a6a2a2bc96e438(fuse.js@6.6.2)(typescript@5.8.3))(typescript@5.8.3)
+        version: https://codeload.github.com/okfde/froide-food/tar.gz/200f0560e97ca500092d33dd8fcef43641bfcb55(froide@https://codeload.github.com/okfde/froide/tar.gz/0804cb08252ff7cde2624b74a1a6a2a2bc96e438(fuse.js@6.6.2)(typescript@5.8.3))(typescript@5.8.3)
       froide_legalaction:
         specifier: github:okfde/froide-legalaction
-        version: https://codeload.github.com/okfde/froide-legalaction/tar.gz/f85308f1d439e796773a11399794b186b86a46b3
+        version: https://codeload.github.com/okfde/froide-legalaction/tar.gz/3105f278b5224699f684a3976317a98db0e8ee46
       froide_payment:
         specifier: github:okfde/froide-payment
-        version: https://codeload.github.com/okfde/froide-payment/tar.gz/766ea0acaf1a0e613ef3de2c59d13860f0a5487a
+        version: https://codeload.github.com/okfde/froide-payment/tar.gz/f3a1679cca441e47735cd5abc56d5a25df7bf80f
       vega:
         specifier: ^5.30.0
         version: 5.30.0
@@ -491,8 +491,8 @@ packages:
       prettier: ^3.5.3
       prettier-config-standard: ^7.0.0
 
-  '@okfde/filingcabinet@https://codeload.github.com/okfde/django-filingcabinet/tar.gz/64b7b4ad804067e2f16e8a0f165c139e3ffe5fb5':
-    resolution: {tarball: https://codeload.github.com/okfde/django-filingcabinet/tar.gz/64b7b4ad804067e2f16e8a0f165c139e3ffe5fb5}
+  '@okfde/filingcabinet@https://codeload.github.com/okfde/django-filingcabinet/tar.gz/d70b5d3ab00f2262d18bfb381fab95473b73ac1a':
+    resolution: {tarball: https://codeload.github.com/okfde/django-filingcabinet/tar.gz/d70b5d3ab00f2262d18bfb381fab95473b73ac1a}
     version: 0.0.4
 
   '@panzoom/panzoom@4.6.0':
@@ -683,29 +683,33 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@sentry-internal/feedback@7.119.0':
-    resolution: {integrity: sha512-om8TkAU5CQGO8nkmr7qsSBVkP+/vfeS4JgtW3sjoTK0fhj26+DljR6RlfCGWtYQdPSP6XV7atcPTjbSnsmG9FQ==}
-    engines: {node: '>=12'}
+  '@sentry-internal/browser-utils@9.14.0':
+    resolution: {integrity: sha512-pDk9XUu9zf7lcT9QX0nTObPNp/y0xQyy1Dj+5/8TSB3vAfe0LQcooKGl/D1h7EoIXVHUozZk5JC/dH+gz6BXRg==}
+    engines: {node: '>=18'}
 
-  '@sentry-internal/replay-canvas@7.119.0':
-    resolution: {integrity: sha512-NL02VQx6ekPxtVRcsdp1bp5Tb5w6vnfBKSIfMKuDRBy5A10Uc3GSoy/c3mPyHjOxB84452A+xZSx6bliEzAnuA==}
-    engines: {node: '>=12'}
+  '@sentry-internal/feedback@9.14.0':
+    resolution: {integrity: sha512-D+PiEUWbDT0vqmaTiOs6OzXwVRVFgf7BCkFs48qsN9sAPwUgT+5zh2oo/rU2r0NrmMcvJVtSY+ezwPMk8BgGsg==}
+    engines: {node: '>=18'}
+
+  '@sentry-internal/replay-canvas@9.14.0':
+    resolution: {integrity: sha512-GhCSqc0oNzRiLhQsi9LCXgUmIwdHdvzVIsX4fihoFYWfgWSSj5YLqeEkb3CMM8htM6vheSFzIbPLlRS8fjCrPQ==}
+    engines: {node: '>=18'}
+
+  '@sentry-internal/replay@9.14.0':
+    resolution: {integrity: sha512-wgt397/PtpfVQ9t779a0L+hGH3JN9doXv3+9Wj98MLWwhymvJBjpjCFUBLScO5iP6imewTbRqQHbq7XS7I+x1A==}
+    engines: {node: '>=18'}
 
   '@sentry-internal/tracing@7.114.0':
     resolution: {integrity: sha512-dOuvfJN7G+3YqLlUY4HIjyWHaRP8vbOgF+OsE5w2l7ZEn1rMAaUbPntAR8AF9GBA6j2zWNoSo8e7GjbJxVofSg==}
-    engines: {node: '>=8'}
-
-  '@sentry-internal/tracing@7.119.0':
-    resolution: {integrity: sha512-oKdFJnn+56f0DHUADlL8o9l8jTib3VDLbWQBVkjD9EprxfaCwt2m8L5ACRBdQ8hmpxCEo4I8/6traZ7qAdBUqA==}
     engines: {node: '>=8'}
 
   '@sentry/babel-plugin-component-annotate@2.22.4':
     resolution: {integrity: sha512-hbSq067KwmeKIEkmyzkTNJbmbtx2KRqvpiy9Q/DynI5Z46Nko/ppvgIfyFXK9DelwvEPOqZic4WXTIhO4iv3DA==}
     engines: {node: '>= 14'}
 
-  '@sentry/browser@7.119.0':
-    resolution: {integrity: sha512-WwmW1Y4D764kVGeKmdsNvQESZiAn9t8LmCWO0ucBksrjL2zw9gBPtOpRcO6l064sCLeSxxzCN+kIxhRm1gDFEA==}
-    engines: {node: '>=8'}
+  '@sentry/browser@9.14.0':
+    resolution: {integrity: sha512-acxFbFEei3hzKr/IW3OmkzHlwohRaRBG0872nIhLYV2f/BgZmR6eV5zrUoELMmt2cgoLmDYyfp1734OoplfDbw==}
+    engines: {node: '>=18'}
 
   '@sentry/bundler-plugin-core@2.22.4':
     resolution: {integrity: sha512-25NiyV3v6mdqOXlpzbbJnq0FHdAu1uTEDr+DU8CzNLjIXlq2Sr2CFZ/mhRcR6daM8OAretJdQ34lu0yHUVeE4Q==}
@@ -761,21 +765,13 @@ packages:
     resolution: {integrity: sha512-YnanVlmulkjgZiVZ9BfY9k6I082n+C+LbZo52MTvx3FY6RE5iyiPMpaOh67oXEZRWcYQEGm+bKruRxLVP6RlbA==}
     engines: {node: '>=8'}
 
-  '@sentry/core@7.119.0':
-    resolution: {integrity: sha512-CS2kUv9rAJJEjiRat6wle3JATHypB0SyD7pt4cpX5y0dN5dZ1JrF57oLHRMnga9fxRivydHz7tMTuBhSSwhzjw==}
-    engines: {node: '>=8'}
+  '@sentry/core@9.14.0':
+    resolution: {integrity: sha512-OLfucnP3LAL5bxVNWc2RVOHCX7fk9Er5bWPCS+O5cPjqNUUz0HQHhVh2Vhei5C0kYZZM4vy4BQit5T9LrlOaNA==}
+    engines: {node: '>=18'}
 
   '@sentry/integrations@7.114.0':
     resolution: {integrity: sha512-BJIBWXGKeIH0ifd7goxOS29fBA8BkEgVVCahs6xIOXBjX1IRS6PmX0zYx/GP23nQTfhJiubv2XPzoYOlZZmDxg==}
     engines: {node: '>=8'}
-
-  '@sentry/integrations@7.119.0':
-    resolution: {integrity: sha512-OHShvtsRW0A+ZL/ZbMnMqDEtJddPasndjq+1aQXw40mN+zeP7At/V1yPZyFaURy86iX7Ucxw5BtmzuNy7hLyTA==}
-    engines: {node: '>=8'}
-
-  '@sentry/replay@7.119.0':
-    resolution: {integrity: sha512-BnNsYL+X5I4WCH6wOpY6HQtp4MgVt0NVlhLUsEyrvMUiTs0bPkDBrulsgZQBUKJsbOr3l9nHrFoNVB/0i6WNLA==}
-    engines: {node: '>=12'}
 
   '@sentry/tracing@7.114.0':
     resolution: {integrity: sha512-eldEYGADReZ4jWdN5u35yxLUSTOvjsiZAYd4KBEpf+Ii65n7g/kYOKAjNl7tHbrEG1EsMW4nDPWStUMk1w+tfg==}
@@ -785,16 +781,8 @@ packages:
     resolution: {integrity: sha512-tsqkkyL3eJtptmPtT0m9W/bPLkU7ILY7nvwpi1hahA5jrM7ppoU0IMaQWAgTD+U3rzFH40IdXNBFb8Gnqcva4w==}
     engines: {node: '>=8'}
 
-  '@sentry/types@7.119.0':
-    resolution: {integrity: sha512-27qQbutDBPKGbuJHROxhIWc1i0HJaGLA90tjMu11wt0E4UNxXRX+UQl4Twu68v4EV3CPvQcEpQfgsViYcXmq+w==}
-    engines: {node: '>=8'}
-
   '@sentry/utils@7.114.0':
     resolution: {integrity: sha512-319N90McVpupQ6vws4+tfCy/03AdtsU0MurIE4+W5cubHME08HtiEWlfacvAxX+yuKFhvdsO4K4BB/dj54ideg==}
-    engines: {node: '>=8'}
-
-  '@sentry/utils@7.119.0':
-    resolution: {integrity: sha512-ZwyXexWn2ZIe2bBoYnXJVPc2esCSbKpdc6+0WJa8eutXfHq3FRKg4ohkfCBpfxljQGEfP1+kfin945lA21Ka+A==}
     engines: {node: '>=8'}
 
   '@sentry/vite-plugin@2.22.4':
@@ -1657,28 +1645,28 @@ packages:
     resolution: {tarball: https://codeload.github.com/okfde/froide/tar.gz/0804cb08252ff7cde2624b74a1a6a2a2bc96e438}
     version: 1.0.0
 
-  froide_campaign@https://codeload.github.com/okfde/froide-campaign/tar.gz/5d4914f7c2d8eabcc0d121bb46ec9d56595d9eae:
-    resolution: {tarball: https://codeload.github.com/okfde/froide-campaign/tar.gz/5d4914f7c2d8eabcc0d121bb46ec9d56595d9eae}
+  froide_campaign@https://codeload.github.com/okfde/froide-campaign/tar.gz/e2512752e75dabd27ca6301dfcee1cdf1de20420:
+    resolution: {tarball: https://codeload.github.com/okfde/froide-campaign/tar.gz/e2512752e75dabd27ca6301dfcee1cdf1de20420}
     version: 1.0.0
     peerDependencies:
       froide: github:okfde/froide
 
-  froide_exam@https://codeload.github.com/okfde/froide-exam/tar.gz/88a2cda9f71b9f8eef9d4bb07e200463e5554e62:
-    resolution: {tarball: https://codeload.github.com/okfde/froide-exam/tar.gz/88a2cda9f71b9f8eef9d4bb07e200463e5554e62}
+  froide_exam@https://codeload.github.com/okfde/froide-exam/tar.gz/779005ccfc21a3e75aeb57eb486c91b670739a3c:
+    resolution: {tarball: https://codeload.github.com/okfde/froide-exam/tar.gz/779005ccfc21a3e75aeb57eb486c91b670739a3c}
     version: 1.0.0
 
-  froide_food@https://codeload.github.com/okfde/froide-food/tar.gz/1c5b611ec6273e4e8dc5d27ef048231343f95dff:
-    resolution: {tarball: https://codeload.github.com/okfde/froide-food/tar.gz/1c5b611ec6273e4e8dc5d27ef048231343f95dff}
+  froide_food@https://codeload.github.com/okfde/froide-food/tar.gz/200f0560e97ca500092d33dd8fcef43641bfcb55:
+    resolution: {tarball: https://codeload.github.com/okfde/froide-food/tar.gz/200f0560e97ca500092d33dd8fcef43641bfcb55}
     version: 1.0.0
     peerDependencies:
       froide: github:okfde/froide
 
-  froide_legalaction@https://codeload.github.com/okfde/froide-legalaction/tar.gz/f85308f1d439e796773a11399794b186b86a46b3:
-    resolution: {tarball: https://codeload.github.com/okfde/froide-legalaction/tar.gz/f85308f1d439e796773a11399794b186b86a46b3}
+  froide_legalaction@https://codeload.github.com/okfde/froide-legalaction/tar.gz/3105f278b5224699f684a3976317a98db0e8ee46:
+    resolution: {tarball: https://codeload.github.com/okfde/froide-legalaction/tar.gz/3105f278b5224699f684a3976317a98db0e8ee46}
     version: 1.0.0
 
-  froide_payment@https://codeload.github.com/okfde/froide-payment/tar.gz/766ea0acaf1a0e613ef3de2c59d13860f0a5487a:
-    resolution: {tarball: https://codeload.github.com/okfde/froide-payment/tar.gz/766ea0acaf1a0e613ef3de2c59d13860f0a5487a}
+  froide_payment@https://codeload.github.com/okfde/froide-payment/tar.gz/f3a1679cca441e47735cd5abc56d5a25df7bf80f:
+    resolution: {tarball: https://codeload.github.com/okfde/froide-payment/tar.gz/f3a1679cca441e47735cd5abc56d5a25df7bf80f}
     version: 1.0.0
 
   fs-minipass@2.1.0:
@@ -3315,7 +3303,7 @@ snapshots:
       - typescript
       - vue-eslint-parser
 
-  '@okfde/filingcabinet@https://codeload.github.com/okfde/django-filingcabinet/tar.gz/64b7b4ad804067e2f16e8a0f165c139e3ffe5fb5(typescript@5.8.3)':
+  '@okfde/filingcabinet@https://codeload.github.com/okfde/django-filingcabinet/tar.gz/d70b5d3ab00f2262d18bfb381fab95473b73ac1a(typescript@5.8.3)':
     dependencies:
       '@popperjs/core': 2.11.8
       bootstrap: 5.3.3(@popperjs/core@2.11.8)
@@ -3453,18 +3441,23 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.40.1':
     optional: true
 
-  '@sentry-internal/feedback@7.119.0':
+  '@sentry-internal/browser-utils@9.14.0':
     dependencies:
-      '@sentry/core': 7.119.0
-      '@sentry/types': 7.119.0
-      '@sentry/utils': 7.119.0
+      '@sentry/core': 9.14.0
 
-  '@sentry-internal/replay-canvas@7.119.0':
+  '@sentry-internal/feedback@9.14.0':
     dependencies:
-      '@sentry/core': 7.119.0
-      '@sentry/replay': 7.119.0
-      '@sentry/types': 7.119.0
-      '@sentry/utils': 7.119.0
+      '@sentry/core': 9.14.0
+
+  '@sentry-internal/replay-canvas@9.14.0':
+    dependencies:
+      '@sentry-internal/replay': 9.14.0
+      '@sentry/core': 9.14.0
+
+  '@sentry-internal/replay@9.14.0':
+    dependencies:
+      '@sentry-internal/browser-utils': 9.14.0
+      '@sentry/core': 9.14.0
 
   '@sentry-internal/tracing@7.114.0':
     dependencies:
@@ -3472,24 +3465,15 @@ snapshots:
       '@sentry/types': 7.114.0
       '@sentry/utils': 7.114.0
 
-  '@sentry-internal/tracing@7.119.0':
-    dependencies:
-      '@sentry/core': 7.119.0
-      '@sentry/types': 7.119.0
-      '@sentry/utils': 7.119.0
-
   '@sentry/babel-plugin-component-annotate@2.22.4': {}
 
-  '@sentry/browser@7.119.0':
+  '@sentry/browser@9.14.0':
     dependencies:
-      '@sentry-internal/feedback': 7.119.0
-      '@sentry-internal/replay-canvas': 7.119.0
-      '@sentry-internal/tracing': 7.119.0
-      '@sentry/core': 7.119.0
-      '@sentry/integrations': 7.119.0
-      '@sentry/replay': 7.119.0
-      '@sentry/types': 7.119.0
-      '@sentry/utils': 7.119.0
+      '@sentry-internal/browser-utils': 9.14.0
+      '@sentry-internal/feedback': 9.14.0
+      '@sentry-internal/replay': 9.14.0
+      '@sentry-internal/replay-canvas': 9.14.0
+      '@sentry/core': 9.14.0
 
   '@sentry/bundler-plugin-core@2.22.4':
     dependencies:
@@ -3550,10 +3534,7 @@ snapshots:
       '@sentry/types': 7.114.0
       '@sentry/utils': 7.114.0
 
-  '@sentry/core@7.119.0':
-    dependencies:
-      '@sentry/types': 7.119.0
-      '@sentry/utils': 7.119.0
+  '@sentry/core@9.14.0': {}
 
   '@sentry/integrations@7.114.0':
     dependencies:
@@ -3562,35 +3543,15 @@ snapshots:
       '@sentry/utils': 7.114.0
       localforage: 1.10.0
 
-  '@sentry/integrations@7.119.0':
-    dependencies:
-      '@sentry/core': 7.119.0
-      '@sentry/types': 7.119.0
-      '@sentry/utils': 7.119.0
-      localforage: 1.10.0
-
-  '@sentry/replay@7.119.0':
-    dependencies:
-      '@sentry-internal/tracing': 7.119.0
-      '@sentry/core': 7.119.0
-      '@sentry/types': 7.119.0
-      '@sentry/utils': 7.119.0
-
   '@sentry/tracing@7.114.0':
     dependencies:
       '@sentry-internal/tracing': 7.114.0
 
   '@sentry/types@7.114.0': {}
 
-  '@sentry/types@7.119.0': {}
-
   '@sentry/utils@7.114.0':
     dependencies:
       '@sentry/types': 7.114.0
-
-  '@sentry/utils@7.119.0':
-    dependencies:
-      '@sentry/types': 7.119.0
 
   '@sentry/vite-plugin@2.22.4':
     dependencies:
@@ -4621,7 +4582,7 @@ snapshots:
     dependencies:
       '@hey-api/client-fetch': 0.4.4
       '@hey-api/openapi-ts': 0.55.3(typescript@5.8.3)
-      '@okfde/filingcabinet': https://codeload.github.com/okfde/django-filingcabinet/tar.gz/64b7b4ad804067e2f16e8a0f165c139e3ffe5fb5(typescript@5.8.3)
+      '@okfde/filingcabinet': https://codeload.github.com/okfde/django-filingcabinet/tar.gz/d70b5d3ab00f2262d18bfb381fab95473b73ac1a(typescript@5.8.3)
       '@panzoom/panzoom': 4.6.0
       '@popperjs/core': 2.11.8
       '@types/lodash.throttle': 4.1.9
@@ -4665,7 +4626,7 @@ snapshots:
       - universal-cookie
       - worker-loader
 
-  froide_campaign@https://codeload.github.com/okfde/froide-campaign/tar.gz/5d4914f7c2d8eabcc0d121bb46ec9d56595d9eae(froide@https://codeload.github.com/okfde/froide/tar.gz/0804cb08252ff7cde2624b74a1a6a2a2bc96e438(fuse.js@6.6.2)(typescript@5.8.3))(typescript@5.8.3):
+  froide_campaign@https://codeload.github.com/okfde/froide-campaign/tar.gz/e2512752e75dabd27ca6301dfcee1cdf1de20420(froide@https://codeload.github.com/okfde/froide/tar.gz/0804cb08252ff7cde2624b74a1a6a2a2bc96e438(fuse.js@6.6.2)(typescript@5.8.3))(typescript@5.8.3):
     dependencies:
       '@turf/bbox': 6.5.0
       '@types/leaflet': 1.9.12
@@ -4680,9 +4641,9 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  froide_exam@https://codeload.github.com/okfde/froide-exam/tar.gz/88a2cda9f71b9f8eef9d4bb07e200463e5554e62: {}
+  froide_exam@https://codeload.github.com/okfde/froide-exam/tar.gz/779005ccfc21a3e75aeb57eb486c91b670739a3c: {}
 
-  froide_food@https://codeload.github.com/okfde/froide-food/tar.gz/1c5b611ec6273e4e8dc5d27ef048231343f95dff(froide@https://codeload.github.com/okfde/froide/tar.gz/0804cb08252ff7cde2624b74a1a6a2a2bc96e438(fuse.js@6.6.2)(typescript@5.8.3))(typescript@5.8.3):
+  froide_food@https://codeload.github.com/okfde/froide-food/tar.gz/200f0560e97ca500092d33dd8fcef43641bfcb55(froide@https://codeload.github.com/okfde/froide/tar.gz/0804cb08252ff7cde2624b74a1a6a2a2bc96e438(fuse.js@6.6.2)(typescript@5.8.3))(typescript@5.8.3):
     dependencies:
       '@turf/bbox': 6.5.0
       '@vue-leaflet/vue-leaflet': 0.8.4(leaflet@1.9.4)(vue@3.5.13(typescript@5.8.3))
@@ -4694,9 +4655,9 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  froide_legalaction@https://codeload.github.com/okfde/froide-legalaction/tar.gz/f85308f1d439e796773a11399794b186b86a46b3: {}
+  froide_legalaction@https://codeload.github.com/okfde/froide-legalaction/tar.gz/3105f278b5224699f684a3976317a98db0e8ee46: {}
 
-  froide_payment@https://codeload.github.com/okfde/froide-payment/tar.gz/766ea0acaf1a0e613ef3de2c59d13860f0a5487a:
+  froide_payment@https://codeload.github.com/okfde/froide-payment/tar.gz/f3a1679cca441e47735cd5abc56d5a25df7bf80f:
     dependencies:
       '@stripe/stripe-js': 3.5.0
 
