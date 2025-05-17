@@ -6,11 +6,6 @@ import yaml
 
 repos = {
     "froide": "froide",
-    "froide-campaign": "froide_campaign",
-    "froide-exam": "froide_exam",
-    "froide-food": "froide_food",
-    "froide-legalaction": "froide_legalaction",
-    "froide-payment": "froide_payment",
     "django-filingcabinet": "@okfde/filingcabinet",
 }
 

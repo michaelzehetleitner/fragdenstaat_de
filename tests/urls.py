@@ -13,7 +13,4 @@ urlpatterns = [
         "spenden/spende/",
         include("fragdenstaat_de.fds_donation.urls", namespace="fds_donation"),
     ),
-    path("crowdfunding/", include("froide_crowdfunding.urls")),
-    path("food/", include("froide_food.urls")),
-    path("exam/", include("froide_exam.urls")),
 ] + base_urlpatterns

@@ -10,10 +10,10 @@ if [ !  -z "${FRAGDENSTAAT_DYLD_LIBRARY_PATH:-}" ]; then
 fi
 
 MAIN=fragdenstaat_de
-REPOS=("froide" "froide-campaign" "froide-legalaction" "froide-food" "froide-payment" "froide-crowdfunding" "froide-govplan" "froide-fax" "froide-exam" "django-filingcabinet" "froide-evidencecollection")
-FRONTEND=("froide" "froide_food" "froide_exam" "froide_campaign" "froide_payment" "froide_legalaction" "@okfde/filingcabinet")
-FRONTEND_DIR=("froide" "froide-food" "froide-exam" "froide-campaign" "froide-payment" "froide-legalaction" "django-filingcabinet")
-FROIDE_PEERS=("froide-campaign" "froide-food") # these have peer-dependencies on froide
+REPOS=("froide" "django-filingcabinet")
+FRONTEND=("froide" "@okfde/filingcabinet")
+FRONTEND_DIR=("froide" "django-filingcabinet")
+FROIDE_PEERS=() # no additional peers
 
 ask() {
     # https://djm.me/ask
