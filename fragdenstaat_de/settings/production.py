@@ -290,9 +290,6 @@ class FragDenStaat(FragDenStaatBase):
     META_SITE_PROTOCOL = "https"
 
     TASTYPIE_DEFAULT_FORMATS = ["json"]
-    NEWSLETTER_PIXEL_ORIGIN = env(
-        "NEWSLETTER_PIXEL_ORIGIN", "https://pixel.fragdenstaat.de"
-    )
 
 
 class FragDenStaatDebug(FragDenStaat):

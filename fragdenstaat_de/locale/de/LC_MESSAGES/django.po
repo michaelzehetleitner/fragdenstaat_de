@@ -20,210 +20,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 3.5\n"
 
-#: fragdenstaat_de/fds_events/admin.py
-msgid "Edit Content"
-msgstr "Inhalt bearbeiten"
-
-#: fragdenstaat_de/fds_events/admin.py
-msgid "Content"
-msgstr "Inhalt"
-
-#: fragdenstaat_de/fds_events/apps.py fragdenstaat_de/fds_events/utils.py
-msgid "FragDenStaat Events"
-msgstr "FragDenStaat-Termine"
-
-#: fragdenstaat_de/fds_events/cms_apps.py
-msgid "Events CMS App"
-msgstr "Termine CMS-App"
-
-#: fragdenstaat_de/fds_events/cms_plugins.py
-#: fragdenstaat_de/fds_events/cms_toolbars.py
-#: fragdenstaat_de/fds_events/models.py
-msgctxt "physical event"
-msgid "Events"
-msgstr "Termine"
-
-#: fragdenstaat_de/fds_events/cms_plugins.py
-msgctxt "physical event"
-msgid "Next events"
-msgstr "Nächste Termine"
-
-#: fragdenstaat_de/fds_events/cms_toolbars.py
-msgid "Edit this event"
-msgstr "Diesen Termin bearbeiten"
-
-#: fragdenstaat_de/fds_events/cms_toolbars.py
-msgid "Events overview"
-msgstr "Terminübersicht"
-
-#: fragdenstaat_de/fds_events/cms_toolbars.py
-msgid "Create new event"
-msgstr "Neuen Termin erstellen"
-
-#: fragdenstaat_de/fds_events/models.py
-msgid "Title"
-msgstr "Titel"
-
-#: fragdenstaat_de/fds_events/models.py
-msgid "Slug"
-msgstr "URL-Kürzel"
-
-#: fragdenstaat_de/fds_events/models.py
-msgid "Description"
-msgstr "Beschreibung"
-
-#: fragdenstaat_de/fds_events/models.py
-msgid "Short description, will be shown in the list view"
-msgstr "Kurze Beschreibung, die in der Liste angezeigt wird"
-
-#: fragdenstaat_de/fds_events/models.py
-#: fragdenstaat_de/fds_events/templates/fds_events/event_detail.html
-msgid "Start"
-msgstr "Beginn"
-
-#: fragdenstaat_de/fds_events/models.py
-#: fragdenstaat_de/fds_events/templates/fds_events/event_detail.html
-msgid "End"
-msgstr "Ende"
-
-#: fragdenstaat_de/fds_events/models.py
-#: fragdenstaat_de/fds_events/templates/fds_events/event_detail.html
-msgid "Location"
-msgstr "Ort"
-
-#: fragdenstaat_de/fds_events/models.py
-msgid "image"
-msgstr "Bild"
-
-#: fragdenstaat_de/fds_events/models.py
-msgctxt "physical event"
-msgid "Event"
-msgstr "Termin"
-
-#: fragdenstaat_de/fds_events/templates/fds_events/event_detail.html
-msgid "Add to calendar"
-msgstr "Zum Kalender hinzufügen"
-
-#: fragdenstaat_de/fds_events/templates/fds_events/event_list.html
-msgid "There are currently no upcoming events."
-msgstr "Gerade gibt es keine neuen Termine."
-
-#: fragdenstaat_de/fds_fximport/helper.py
-msgid "NAME"
-msgstr "NAME"
-
-#: fragdenstaat_de/fds_fximport/tasks.py
-msgid "New Message imported"
-msgstr "Neue Nachricht importiert"
-
-#: fragdenstaat_de/fds_fximport/tasks.py
-msgid "Message import failed"
-msgstr "Nachrichtenimport fehlgeschlagen"
-
-#: fragdenstaat_de/fds_fximport/templates/fds_fximport/emails/failed.txt
-#, python-format
-msgid ""
-"Hello %(name)s,\n"
-"\n"
-"there was an error trying to import messages to your request “%(title)s”. "
-"Please try again. If the issue persists, please contact us.\n"
-"\n"
-"To try again, click the link below:\n"
-"\n"
-"%(action_url)s\n"
-"\n"
-"Cheers,\n"
-"%(site_name)s"
-msgstr ""
-"Hallo %(name)s,\n"
-"\n"
-"beim Importieren der Nachrichten zu Ihrer Anfrage \"%(title)s\" ist ein "
-"Fehler aufgetreten. Bitte probieren Sie es erneut und kontaktieren Sie uns, "
-"falls der Fehler weiterhin besteht.\n"
-"\n"
-"Um es erneut zu versuchen, klicken Sie bitte den folgenden Link:\n"
-"\n"
-"%(action_url)s\n"
-"\n"
-"Beste Grüße\n"
-"%(site_name)s"
-
-#: fragdenstaat_de/fds_fximport/templates/fds_fximport/emails/success.txt
-#, python-format
-msgid ""
-"Hello %(name)s,\n"
-"\n"
-"we successfully imported the messages to your request “%(title)s”. Please "
-"read the response and change the status of the request if needed. You can "
-"also send another message.\n"
-"\n"
-"To read your response and to reply to the authority, click the link below:\n"
-"\n"
-"%(action_url)s\n"
-"\n"
-"Cheers,\n"
-"%(site_name)s"
-msgstr ""
-"Hallo %(name)s,\n"
-"\n"
-"die Nachrichten zu Ihrer Anfrage \"%(title)s\" wurden erfolgreich importiert. "
-"Bitte lesen Sie die Antwort und ändern Sie den Status Ihrer Anfrage falls "
-"nötig. Sie können auch eine weitere Nachricht senden.\n"
-"\n"
-"Um die Antwort zu lesen und den richtigen Zustand anzugeben, klicken Sie auf "
-"diesen Link:\n"
-"\n"
-"%(action_url)s\n"
-"\n"
-"Beste Grüße\n"
-"%(site_name)s"
-
-#: fragdenstaat_de/fds_fximport/templates/fds_fximport/import_frag.html
-msgid ""
-"\n"
-"  Import Message from Frontex\n"
-"  "
-msgstr ""
-"\n"
-"  Nachricht von Frontex importieren\n"
-"  "
-
-#: fragdenstaat_de/fds_fximport/templates/fds_fximport/import_frag.html
-msgid "Message from Frontex"
-msgstr "Nachricht von Frontex"
-
-#: fragdenstaat_de/fds_fximport/templates/fds_fximport/import_frag.html
-msgid "Close"
-msgstr "Schließen"
-
-#: fragdenstaat_de/fds_fximport/templates/fds_fximport/import_frag.html
-msgid ""
-"\n"
-"              We automatically import the message from frontex for you and "
-"permanently store it on FragDenStaat.\n"
-"            "
-msgstr ""
-"\n"
-"              Wir importieren die Nachricht von Frontex automatisch für Sie "
-"und speichern sie dauerhaft auf FragDenStaat.\n"
-"            "
-
-#: fragdenstaat_de/fds_fximport/templates/fds_fximport/import_frag.html
-msgid "Import message"
-msgstr "Nachricht importieren"
-
-#: fragdenstaat_de/fds_fximport/templates/fds_fximport/import_frag.html
-msgid "Gif of a cat furiously typing on a keyboard"
-msgstr "GIF einer Katze die wild auf eine Tastatur hackt"
-
-#: fragdenstaat_de/fds_fximport/views.py
-msgid "This is not a message from frontex."
-msgstr "Dies ist keine Nachricht von Frontex."
-
-#: fragdenstaat_de/fds_fximport/views.py
-msgid "Import stated. You will receive an email once it finishes."
-msgstr ""
-"Import gestartet. Sie erhalten eine E-Mail, sobald dieser abgeschlossen ist."
 
 #: fragdenstaat_de/settings/base.py
 msgid "German"
@@ -856,21 +652,6 @@ msgstr ""
 #~ msgid "Article archive"
 #~ msgstr "Artikel-Archiv"
 
-#, python-format
-#~ msgid ""
-#~ "\n"
-#~ "                                Browse our recent or historical articles. "
-#~ "Stay up to date by subscribing to our <a "
-#~ "href=\"%(newsletter)s\">newsletter</a> or the <a href=\"%(feed)s\">RSS "
-#~ "feed</a>.\n"
-#~ "                            "
-#~ msgstr ""
-#~ "\n"
-#~ "                                Durchsuchen Sie unsere aktuellen oder "
-#~ "verganenen Artikel. Bleiben Sie auf dem Laufenden, indem Sie unseren <a "
-#~ "href=\"%(newsletter)s\">Newsletter</a> oder den <a href=\"%(feed)s\">RSS-"
-#~ "Feed</a> abonnieren.\n"
-#~ "                            "
 
 #~ msgid "Categories…"
 #~ msgstr "Kategorien…"
@@ -1308,8 +1089,6 @@ msgstr ""
 #~ "%(site)s hilft Ihnen, Informationsfreiheitsanfragen an Behörden zu stellen"
 
 #, python-format
-#~ msgid "Newsletter from %(date)s"
-#~ msgstr "Newsletter vom %(date)s"
 
 #~ msgid "Campaigns"
 #~ msgstr "Kampagnen"
@@ -2174,26 +1953,17 @@ msgstr ""
 #~ msgstr[0] "Eine Anfrage braucht Ihre Aufmerksamkeit"
 #~ msgstr[1] "%(counter)s Anfragen brauchen Ihre Aufmerksamkeit"
 
-#~ msgid "Your followed requests"
 #~ msgstr "Anfragen, denen Sie folgen"
 
-#~ msgid "Recent event on your followed requests:"
 #~ msgstr "Kürzliche Änderungen bei Anfragen, die Sie interessieren:"
 
-#~ msgid "Your are following one request, but there are no recent events."
 #~ msgid_plural ""
-#~ "You are following %(counter)s requests, but there are no recent events."
-#~ msgstr[0] "Sie folgen einer Anfrage, aber es gibt nichts Neues."
-#~ msgstr[1] "Sie folgen %(counter)s Anfragen, aber es gibt nichts Neues."
 
-#~ msgid "You don't follow any requests."
 #~ msgstr "Sie folgen keinen Anfragen."
 
-#~ msgid "Show all the requests that you are following."
 #~ msgstr "Alle Anfragen, die Sie interessieren, anzeigen."
 
 #~ msgid ""
-#~ "You don't follow any requests. Click the follow button on a request page "
 #~ "to follow it."
 #~ msgstr ""
 #~ "Sie erhalten keine Neuigkeiten für Anfragen. Klicken Sie den "
@@ -2998,10 +2768,8 @@ msgstr ""
 #~ msgid "The deadline of request %(request)s has been extended."
 #~ msgstr "Die Frist der Anfrage %(request)s wurde verlängert."
 
-#~ msgid "Request Event"
 #~ msgstr "Anfrageereignis"
 
-#~ msgid "Request Events"
 #~ msgstr "Anfrageereignisse"
 
 #~ msgid "%(site_name)s: Request became overdue"
@@ -4275,32 +4043,23 @@ msgstr ""
 #~ msgid "%(time)s: %(text)s"
 #~ msgstr "%(time)s: %(text)s"
 
-#~ msgid "TIME_FORMAT"
 #~ msgstr "H:i"
 
 #~ msgid ""
-#~ "The following happend in the last 24 hours:\n"
-#~ "%(events)s"
 #~ msgstr ""
 #~ "Folgendes passierte in den letzten 24 Stunden:\n"
-#~ "%(events)s"
 
 #~ msgctxt "URL part"
-#~ msgid "confirm-follow"
 #~ msgstr "benachrichtigungen-erhalten"
 
 #~ msgctxt "URL part"
-#~ msgid "unfollow"
 #~ msgstr "keine-benachrichtigungen-erhalten"
 
-#~ msgid "You are now following this request."
 #~ msgstr "Sie erhalten nun Benachrichtigungen für diese Anfrage."
 
-#~ msgid "You are not following this request anymore."
 #~ msgstr "Sie erhalten keine Benachrichtigungen mehr für diese Anfrage."
 
 #~ msgid ""
-#~ "You have not yet confirmed that you want to follow this request. Click the "
 #~ "link in the mail that was sent to you."
 #~ msgstr ""
 #~ "Sie haben noch nicht bestätigt, dass Sie Benachrichtigungen für diese "
@@ -4308,21 +4067,17 @@ msgstr ""
 #~ "gesendet haben."
 
 #~ msgid ""
-#~ "Check your emails and click the confirmation link in order to follow this "
 #~ "request."
 #~ msgstr ""
 #~ "Rufen Sie Ihre E-Mails ab und klicken Sie auf den Bestätigungs-Link um "
 #~ "Benachrichtigungen für diese Anfrage zu erhalten."
 
 #~ msgid ""
-#~ "You are following this request. If you want to unfollow it, click the "
-#~ "unfollow link in the emails you received."
 #~ msgstr ""
 #~ "Sie erhalten Benachrichtigungen für diese Anfrage. Wenn Sie keine mehr "
 #~ "Erhalten möchten, klicken Sie den Abbestellen-Link in den "
 #~ "Benachrichtigungs-E-Mails."
 
-#~ msgid "There was something wrong with your link. Perhaps try again."
 #~ msgstr "Der Link war fehlerhaft, probieren Sie es noch mal."
 
 #~ msgid ""
@@ -4347,7 +4102,6 @@ msgstr ""
 #~ "\n"
 #~ "If you don't want to receive any email updates for this request, click the "
 #~ "link below:\n"
-#~ "%(unfollow_link)s\n"
 #~ "\n"
 #~ "Cheers,\n"
 #~ "%(site_name)s\n"
@@ -4363,7 +4117,6 @@ msgstr ""
 #~ "\n"
 #~ "Wenn Sie keine weiteren E-Mail-Benachrichtigungen erhalten möchten, "
 #~ "klicken Sie diesen Link an:\n"
-#~ "%(unfollow_link)s\n"
 #~ "\n"
 #~ "Beste Grüße\n"
 #~ "%(site_name)s\n"
@@ -4880,8 +4633,6 @@ msgstr ""
 #~ msgstr[0] "Die Anfrage des Nutzers"
 #~ msgstr[1] "Die %(counter)s Anfragen des Nutzers"
 
-#~ msgid "User's recent events"
-#~ msgstr "Kürzliche Aktionen des Nutzers"
 
 #~ msgid "Status of request after this message:"
 #~ msgstr "Status der Anfrage nach dieser Antwort:"
@@ -5043,8 +4794,6 @@ msgstr ""
 #~ msgid "go to request"
 #~ msgstr "zur Anfrage"
 
-#~ msgid "No events yet"
-#~ msgstr "Noch keine Ereignisse"
 
 #~ msgid "Save"
 #~ msgstr "Speichern"
@@ -5465,11 +5214,7 @@ msgstr ""
 #~ msgid "Message not found"
 #~ msgstr "Nachricht nicht gefunden"
 
-#~ msgid "Events"
-#~ msgstr "Termine"
 
-#~ msgid "Next events"
-#~ msgstr "Nächste Termine"
 
 #~ msgid "Edit article"
 #~ msgstr "Artikel bearbeiten"
