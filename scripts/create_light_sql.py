@@ -156,11 +156,8 @@ def generate_copy_script(
             "id IN ((SELECT id FROM document_document WHERE portal_id IS NULL AND user_id IS NOT NULL ORDER BY id DESC LIMIT 500) UNION (SELECT id FROM document_document WHERE portal_id IS NOT NULL ORDER BY id DESC LIMIT 500))",
         ),
         "public.document_documentcollection": ("user_id IS NOT NULL",),
-        "public.fds_donation_donor": ("user_id IS NOT NULL",),
-        "public.fds_donation_donation": ("donor_id IS NOT NULL",),
         "public.foirequest_foirequest": ("public = TRUE",),
         "public.foirequest_foiproject": ("public = TRUE",),
-        "public.fds_blog_article": ("start_publication IS NOT NULL",),
         "public.django_amenities_amenity": ("city = 'Berlin'",),
     }
 

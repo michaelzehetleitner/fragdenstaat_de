@@ -273,44 +273,6 @@
     },
     {
         "model": "cms.page",
-        "pk": 3,
-        "fields": {
-            "created_by": "stefan.wehrmeyer@okfn.de",
-            "changed_by": "stefan.wehrmeyer@okfn.de",
-            "creation_date": "2024-04-22T14:08:10.483Z",
-            "changed_date": "2024-04-22T14:08:42.365Z",
-            "reverse_id": null,
-            "navigation_extenders": null,
-            "login_required": false,
-            "is_home": false,
-            "application_urls": "FdsDonationApp",
-            "application_namespace": "fds_donation",
-            "languages": "de",
-            "is_page_type": false,
-            "node": 3
-        }
-    },
-    {
-        "model": "cms.page",
-        "pk": 4,
-        "fields": {
-            "created_by": "stefan.wehrmeyer@okfn.de",
-            "changed_by": "stefan.wehrmeyer@okfn.de",
-            "creation_date": "2024-04-22T14:19:43.062Z",
-            "changed_date": "2024-04-22T14:19:54.014Z",
-            "reverse_id": null,
-            "navigation_extenders": null,
-            "login_required": false,
-            "is_home": false,
-            "application_urls": "FdsBlogApp",
-            "application_namespace": "blog",
-            "languages": "de",
-            "is_page_type": false,
-            "node": 4
-        }
-    },
-    {
-        "model": "cms.page",
         "pk": 5,
         "fields": {
             "created_by": "stefan.wehrmeyer@okfn.de",

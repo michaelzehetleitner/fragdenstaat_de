@@ -65,7 +65,6 @@ PLUGIN_MODELS = (
     ("fds_cms", "DesignContainerCMSPlugin", update_extra_classes),
     ("fds_cms", "CollapsibleCMSPlugin", update_extra_classes),
     ("fds_cms", "SliderCMSPlugin", update_extra_classes),
-    ("fds_donation", "DonationFormCMSPlugin", update_extra_classes),
     ("froide_govplan", "GovernmentPlansCMSPlugin", update_extra_classes),
     ("fds_cms", "ModalCMSPlugin", update_attributes),
     ("fds_cms", "CardCMSPlugin", update_attributes),
@@ -89,7 +88,6 @@ def convert_bootstrap_classes(apps, schema_editor):
 class Migration(migrations.Migration):
     dependencies = [
         ("fds_cms", "0051_auto_20220826_1234"),
-        ("fds_donation", "0037_donationprogressbarcmsplugin_white_text"),
         ("froide_govplan", "0011_governmentplan_properties"),
     ]
 
