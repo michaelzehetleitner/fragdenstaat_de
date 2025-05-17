@@ -1,1 +1,0 @@
-Ihre Spende an {{ SITE_NAME }}
