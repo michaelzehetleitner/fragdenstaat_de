@@ -51,16 +51,7 @@ class FragDenStaatBase(German, Base):
                 "filer",
                 "logentry_admin",
                 "localflavor",
-                "fragdenstaat_de.fds_blog",
                 "adminsortable2",
-                # Customisations
-                "fragdenstaat_de.fds_newsletter",
-                "fragdenstaat_de.fds_donation.apps.FdsDonationConfig",
-                "fragdenstaat_de.fds_mailing.apps.FdsMailingConfig",
-                "fragdenstaat_de.fds_ogimage.apps.FdsOgImageConfig",
-                "fragdenstaat_de.fds_fximport.apps.FdsFxImportConfig",
-                "fragdenstaat_de.fds_paperless",
-                "fragdenstaat_de.fds_events",
                 # Additional CMS plugins
                 "djangocms_text_ckeditor",
                 "djangocms_picture",
@@ -86,24 +77,7 @@ class FragDenStaatBase(German, Base):
                 "djangocms_frontend.contrib.utilities",
                 # Additional CMS plugins
                 "sortabletable",
-                "contractor",
-                "datashow",
-                "djcelery_email",
                 "django.contrib.redirects",
-                "django_prices",
-                "froide_campaign.apps.FroideCampaignConfig",
-                "froide_legalaction.apps.FroideLegalActionConfig",
-                "froide_payment.apps.FroidePaymentConfig",
-                "froide_crowdfunding.apps.FroideCrowdfundingConfig",
-                "froide_food.apps.FroideFoodConfig",
-                "django_amenities.apps.AmenitiesConfig",
-                "froide_fax.apps.FroideFaxConfig",
-                "froide_exam",
-                "froide_govplan.apps.FroideGovPlanConfig",
-                "froide_evidencecollection.apps.FroideEvidencecollectionConfig",
-                "legal_advice_builder.apps.LegalAdviceBuilderConfig",
-                "fcdocs_annotate.annotation.apps.AnnotationConfig",
-                "tinymce",
             ]
         )
         return installed.default
@@ -153,66 +127,7 @@ class FragDenStaatBase(German, Base):
     def STATICFILES_DIRS(self):
         return [THEME_ROOT / "static"] + super().STATICFILES_DIRS
 
-    # Newsletter
-    NEWSLETTER_RICHTEXT_WIDGET = "djangocms_text_ckeditor.widgets.TextEditorWidget"
-    DEFAULT_NEWSLETTER = "fragdenstaat"
-    DONOR_NEWSLETTER = "spenden"
 
-    def three_days_ago_but_not_sundays(date):
-        """
-        return tuple of gte and lt dates
-        """
-        weekday = date.weekday()
-        if weekday == 6:
-            # empty filter on Sunday
-            return (date, date)
-        elif weekday == 5:
-            # on Saturday, send Wednesday and Thursday subscribers
-            return (date - timedelta(days=3), date - timedelta(days=1))
-        # Otherwise send three days ago subscribers
-        return (date - timedelta(days=3), date - timedelta(days=2))
-
-    NEWSLETTER_WELCOME_MAILINTENT = {DEFAULT_NEWSLETTER: "fds_newsletter/email/welcome"}
-    NEWSLETTER_ONBOARDING_SCHEDULE = [
-        {
-            "newsletter": DEFAULT_NEWSLETTER,
-            "mail_intent": "fds_newsletter/email/intro",
-            "date": three_days_ago_but_not_sundays,
-        }
-    ]
-    NEWSLETTER_PIXEL_ORIGIN = env("NEWSLETTER_PIXEL_ORIGIN", "http://localhost:8000")
-    NEWSLETTER_PIXEL_LOG = env("NEWSLETTER_PIXEL_LOG", "/var/log/pixel.log")
-
-    # Campaign
-
-    CAMPAIGN_PROVIDERS = [
-        ("", "froide_campaign.providers.informationobject.InformationObjectProvider"),
-        ("amenity", "froide_campaign.providers.amenity.AmenityProvider"),
-        ("publicbody", "froide_campaign.providers.publicbody.PublicBodyProvider"),
-        (
-            "amenity_local",
-            "froide_campaign.providers.amenity_local.AmenityLocalProvider",
-        ),
-    ]
-
-    # BLOG
-
-    ARTICLE_CONTENT_TEMPLATES = [
-        ("fds_blog/content/_article_no_image.html", _("No image in article")),
-        ("fds_blog/content/_article_video_header.html", _("Video header")),
-    ]
-    ARTICLE_DETAIL_TEMPLATES = []
-
-    PARLER_LANGUAGES = {
-        1: (
-            {"code": "de"},
-            {"code": "en"},
-        ),
-        "default": {
-            # the default; let .active_translations() return fallbacks too.
-            "hide_untranslated": False,
-        },
-    }
 
     # CMS
 
@@ -262,40 +177,7 @@ class FragDenStaatBase(German, Base):
         ("cms/pub_base.html", "Book Publication template"),
         ("froide_govplan/base.html", "Govplan base template"),
     ]
-    DONATION_LOGIC_PLUGINS = [
-        "IsDonorPlugin",
-        "IsNotDonorPlugin",
-        "IsRecurringDonorPlugin",
-        "IsNotRecurringDonorPlugin",
-        "IsRecentDonor",
-        "IsNotRecentDonor",
-        "ContactAllowedDonor",
-        "ContactNotAllowedDonor",
-        "IsNewsletterSubscriberPlugin",
-        "IsNotNewsletterSubscriberPlugin",
-        "EmailDonationButtonPlugin",
-    ]
-    CMS_PLACEHOLDER_CONF = {
-        "email_body": {
-            "plugins": [
-                "TextPlugin",
-                "EmailActionPlugin",
-                "EmailSectionPlugin",
-                "EmailStoryPlugin",
-                "EmailBodyPlugin",
-                "EmailHeaderPlugin",
-                "PicturePlugin",
-            ]
-            + DONATION_LOGIC_PLUGINS,
-            "text_only_plugins": [],
-            "name": _("E-Mail Body"),
-            "language_fallback": True,
-            "default_plugins": [],
-            "child_classes": {},
-            "parent_classes": {},
-        }
-    }
-    CMS_PLUGIN_CONTEXT_PROCESSORS = ["fragdenstaat_de.fds_mailing.utils.add_style"]
+    CMS_PLUGIN_CONTEXT_PROCESSORS = []
 
     DJANGOCMS_PICTURE_NESTING = True
 
