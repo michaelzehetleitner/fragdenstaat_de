@@ -139,12 +139,6 @@
                             <a href="{{ about_url }}"
                                {% if request.path|startswith:about_url %}class="active" aria-current="page"{% endif %}>{{ about_title }}</a>
                         </li>
-                        {% page_url "newsletter" as newsletter_url %}
-                        {% page_attribute "menu_title" "newsletter" as newsletter_title %}
-                        <li class="nav-sm order-lg-last">
-                            <a href="{{ newsletter_url }}"
-                               {% if request.path|startswith:newsletter_url %}class="active" aria-current="page"{% endif %}>{{ newsletter_title }}</a>
-                        </li>
                         {% page_url "donate" as donate_url %}
                         {% page_attribute "menu_title" "donate" as donate_title %}
                         <li class="nav-sm order-lg-last">

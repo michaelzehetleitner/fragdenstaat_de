@@ -13,9 +13,6 @@
 {% block message_toolbar_item %}
     {% if object|can_write_foirequest:request %}
     {% endif %}
-    {% if message|needs_frontex_import:request.user %}
-        {% include "fds_fximport/import_frag.html" with request=object message=message %}
-    {% endif %}
     {% if message|needs_glyphosat_attachment %}
         <button class="btn btn-primary btn-sm mb-1 mx-sm-1"
                 data-bs-toggle="modal"
