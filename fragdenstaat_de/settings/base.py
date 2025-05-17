@@ -1,6 +1,5 @@
 import os
 import re
-from datetime import timedelta
 from pathlib import Path
 
 from django.utils.translation import gettext_lazy as _
@@ -479,26 +478,7 @@ class FragDenStaatBase(German, Base):
 
     DEFAULT_CURRENCY = "EUR"
     DEFAULT_DECIMAL_PLACES = 2
-    PAYMENT_HOST = "localhost:8000"
-    PAYMENT_USES_SSL = False
-    PAYMENT_MODEL = "froide_payment.Payment"
-    PAYMENT_VARIANTS = {
-        "lastschrift": ("froide_payment.provider.LastschriftProvider", {}),
-        "banktransfer": ("froide_payment.provider.BanktransferProvider", {}),
-        "default": ("payments.dummy.DummyProvider", {}),
-    }
-    PAYMENT_CHECK_THRESHOLD = int(env("PAYMENT_CHECK_THRESHOLD", "1000"))
-    DONATION_PROJECTS = [
-        ("FDS", "FragDenStaat"),  # First project becomes default project
-        ("CFG", "Code for Germany"),
-        ("JH", "Jugend hackt"),
-        ("GM", "Gemeinkosten"),
-    ]
-    DONATION_BACKUP_URL = env("DONATION_BACKUP_URL")
-    DONATION_BACKUP_CREDENTIALS = env("DONATION_BACKUP_CREDENTIALS")
 
-    FDS_LEGAL_BACKUP_URL = env("FDS_LEGAL_BACKUP_URL")
-    FDS_LEGAL_BACKUP_CREDENTIALS = env("FDS_LEGAL_BACKUP_CREDENTIALS")
 
     EMAIL_BACKEND = "fragdenstaat_de.theme.email_backend.CustomCeleryEmailBackend"
     CELERY_EMAIL_BACKEND = "froide.foirequest.smtp.EmailBackend"
@@ -535,7 +515,6 @@ class FragDenStaatBase(German, Base):
                 "dsn": True,
                 "message_handlers": {
                     "email": "froide.foirequest.message_handlers.EmailMessageHandler",
-                    "fax": "froide_fax.fax.FaxMessageHandler",
                 },
                 "delivery_reporter": "froide.foirequest.delivery.PostfixDeliveryReporter",
                 "text_analyzer": "fragdenstaat_de.theme.search.get_text_analyzer",
@@ -674,84 +653,7 @@ class FragDenStaatBase(German, Base):
         )
         return config
 
-    FROIDE_FOOD_CONFIG = {
-        "api_key_google": os.environ.get("GOOGLE_PLACES_API_KEY"),
-        "api_key_geocode_here": os.environ.get("HERE_GEOCODE_API_KEY"),
-        "api_key_geocode_mapbox": os.environ.get("MAPBOX_API_KEY"),
-        "api_key_yelp": os.environ.get("YELP_API_KEY", ""),
-        "api_key_foursquare": os.environ.get("FOURSQUARE_API_KEY"),
-    }
-    GOVPLAN_NAME = "Koalitionstracker"
-    AMENITY_CATEGORY_FUNC = None
-    AMENITY_TOPICS = {
-        "public": (
-            ("building", "sports_centre"),
-            ("leisure", "sports_centre"),
-            ("building", "public"),
-            ("building", "civic"),
-            ("building", "school"),
-            ("building", "government"),
-            ("amenity", "townhall"),
-            ("amenity", "library"),
-            ("amenity", "police"),
-            ("amenity", "school"),
-            ("amenity", "community_centre"),
-            ("amenity", "archive"),
-            ("amenity", "courthouse"),
-            ("amenity", "hospital"),
-            ("amenity", "clinic"),
-            ("amenity", "public_building"),
-            ("office", "government"),
-            ("office", "administrative"),
-            ("government", "*"),
-        ),
-        "food": (
-            ("amenity", "bar"),
-            ("amenity", "biergarten"),
-            ("amenity", "cafe"),
-            ("amenity", "fast_food"),
-            ("amenity", "pub"),
-            ("amenity", "restaurant"),
-            ("amenity", "casino"),
-            ("amenity", "cinema"),
-            ("amenity", "nightclub"),
-            ("amenity", "food_court"),
-            ("amenity", "ice_cream"),
-            ("amenity", "fuel"),
-            ("shop", "alcohol"),
-            ("shop", "bakery"),
-            ("shop", "beverages"),
-            ("shop", "butcher"),
-            ("shop", "cheese"),
-            ("shop", "chocolate"),
-            ("shop", "coffee"),
-            ("shop", "confectionery"),
-            ("shop", "convenience"),
-            ("shop", "deli"),
-            ("shop", "dairy"),
-            ("shop", "farm"),
-            ("shop", "frozen_food"),
-            ("shop", "greengrocer"),
-            ("shop", "health_food"),
-            ("shop", "ice_cream"),
-            ("shop", "organic"),
-            ("shop", "pasta"),
-            ("shop", "pastry"),
-            ("shop", "seafood"),
-            ("shop", "spices"),
-            ("shop", "tea"),
-            ("shop", "wine"),
-            ("shop", "water"),
-            ("shop", "department_store"),
-            ("shop", "general"),
-            ("shop", "kiosk"),
-            ("shop", "supermarket"),
-            ("shop", "wholesale"),
-            ("tourism", "hostel"),
-            ("tourism", "hotel"),
-            ("tourism", "theme_park"),
-        ),
-    }
+
 
     FDS_OGIMAGE_URL = "https://ogimage.frag-den-staat.de/api/{hash}?path={path}"
     APP_SITE_URL = "https://app.fragdenstaat.de"
@@ -790,6 +692,5 @@ class FragDenStaatBase(German, Base):
         ]
     }
 
-    FROIDE_EVIDENCECOLLECTION_GSHEET_IMPORT_CONFIG = values.DictValue()
 
     DATASHOW_STORAGE_BACKEND = "overwrite"

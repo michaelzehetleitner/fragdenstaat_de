@@ -1,7 +1,6 @@
 {% extends "foirequest/body/message/message.html" %}
 {% load i18n %}
 {% load foirequest_tags %}
-{% load fax_tags %}
 {% load fds_tags %}
 {% load campaign_tags %}
 {# add bump to sticky message toolbar when showing questionaire hint! #}
@@ -13,15 +12,6 @@
 {% endblock message_extra_classes %}
 {% block message_toolbar_item %}
     {% if object|can_write_foirequest:request %}
-        {% if message|can_fax_message:request %}
-            {% include "froide_fax/_send_message_form.html" %}
-        {% endif %}
-        {% if message|can_resend_fax %}
-            {% include "froide_fax/_resend_message_form.html" %}
-        {% endif %}
-        {% if message|can_get_fax_report %}
-            {% include "froide_fax/_show_report_link.html" %}
-        {% endif %}
     {% endif %}
     {% if message|needs_frontex_import:request.user %}
         {% include "fds_fximport/import_frag.html" with request=object message=message %}

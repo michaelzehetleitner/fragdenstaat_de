@@ -322,7 +322,6 @@
             "login_required": false,
             "is_home": false,
             "application_urls": "CrowdfundingCMSApp",
-            "application_namespace": "crowdfunding",
             "languages": "de",
             "is_page_type": false,
             "node": 5
@@ -341,7 +340,6 @@
             "login_required": false,
             "is_home": false,
             "application_urls": "GovPlanCMSApp",
-            "application_namespace": "govplan",
             "languages": "de",
             "is_page_type": false,
             "node": 6
@@ -569,7 +567,6 @@
             "login_required": false,
             "is_home": false,
             "application_urls": "ExamCMSApp",
-            "application_namespace": "froide_exam",
             "languages": "de",
             "is_page_type": false,
             "node": 18
@@ -623,8 +620,6 @@
         "model": "cms.pageurl",
         "pk": 5,
         "fields": {
-            "slug": "crowdfunding",
-            "path": "crowdfunding",
             "language": "de",
             "page": 5,
             "managed": true
@@ -1099,7 +1094,6 @@
         "model": "cms.placeholder",
         "pk": 26,
         "fields": {
-            "slot": "froide_food_header",
             "default_width": null,
             "content_type": null,
             "object_id": null
@@ -1109,7 +1103,6 @@
         "model": "cms.placeholder",
         "pk": 27,
         "fields": {
-            "slot": "froide_food_header",
             "default_width": null,
             "content_type": null,
             "object_id": null
@@ -1119,7 +1112,6 @@
         "model": "cms.placeholder",
         "pk": 28,
         "fields": {
-            "slot": "froide_food_footer",
             "default_width": null,
             "content_type": null,
             "object_id": null
@@ -1129,7 +1121,6 @@
         "model": "cms.placeholder",
         "pk": 29,
         "fields": {
-            "slot": "froide_food_footer",
             "default_width": null,
             "content_type": null,
             "object_id": null
@@ -1301,7 +1292,6 @@
             "changed_date": "2024-04-22T14:20:37.764Z",
             "in_navigation": true,
             "soft_root": false,
-            "template": "froide_govplan/base.html",
             "limit_visibility_in_menu": null,
             "xframe_options": 0
         }
@@ -1575,7 +1565,6 @@
         "pk": 1,
         "fields": {
             "name": "",
-            "code": "froide_food_header",
             "draft": 26,
             "public": 27,
             "dirty": false,
@@ -1588,7 +1577,6 @@
         "pk": 2,
         "fields": {
             "name": "",
-            "code": "froide_food_footer",
             "draft": 28,
             "public": 29,
             "dirty": false,
@@ -2520,7 +2508,6 @@
             "creation_method": "template",
             "category": 1,
             "position": 3,
-            "static_code": "froide_food_header",
             "site": null
         }
     },
@@ -2531,7 +2518,6 @@
             "creation_method": "template",
             "category": 1,
             "position": 4,
-            "static_code": "froide_food_footer",
             "site": null
         }
     },

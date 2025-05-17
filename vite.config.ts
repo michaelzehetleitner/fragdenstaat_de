@@ -10,7 +10,6 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 const outputDir = resolve(__dirname, 'build')
 
 // helper function to resolve scripts from froide projects
-// (froide_campaign, list.js) => node_modules/froide_campaign/frontend/javascript/list.js
 const r = (project, file) =>
   resolve(__dirname, 'node_modules', project, 'frontend', 'javascript', file)
 
@@ -34,26 +33,17 @@ export default defineConfig(({ mode }) => ({
       input: {
         audio_player: './frontend/javascript/audio-player.ts',
         bookpub: './frontend/javascript/bookpub.js',
-        campaign_list: r('froide_campaign', 'list.js'),
-        campaign_map: r('froide_campaign', 'map.js'),
-        campaign_questionaire: r('froide_campaign', 'questionaire.js'),
         document: r('froide', 'document.js'),
         docupload: r('froide', 'docupload.js'),
-        exam_curriculum: r('froide_exam', 'curriculum.js'),
         fds_cms: './frontend/javascript/fds_cms.js',
         fileuploader: r('froide', 'fileuploader.js'),
         filingcabinet: r('@okfde/filingcabinet', 'filingcabinet.js'),
         fcdownloader: r('@okfde/filingcabinet', 'fcdownloader.js'),
-        food: r('froide_food', 'food.js'),
-        foodreport: r('froide_food', 'report.js'),
         geomatch: r('froide', 'geomatch.js'),
-        lawsuits_table: r('froide_legalaction', 'table.js'),
-        legal_decisions_listfilter: r('froide_legalaction', 'listFilter.js'),
         main: './frontend/javascript/main.ts',
         makerequest: r('froide', 'makerequest.js'),
         messageredaction: r('froide', 'messageredaction.js'),
         moderation: r('froide', 'moderation.js'),
-        payment: r('froide_payment', 'payment.ts'),
         postupload: r('froide', 'postupload.js'),
         proofupload: r('froide', 'proofupload.js'),
         publicbody: r('froide', 'publicbody.js'),
